@@ -126,7 +126,7 @@ class _StatsCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('نسبة نجاح الكشف',
+            Text('نسبة نجاح الكشف (Detection Accuracy)',
                 style: Theme.of(context).textTheme.titleMedium),
             const Text(
               'النجاح = قبول الوجه الحقيقي أو رفض محاولة التزييف',

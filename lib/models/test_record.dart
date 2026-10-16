@@ -1,9 +1,9 @@
 /// What the tester actually presented to the camera.
 enum AttemptType {
-  realFace('وجه حقيقي'),
-  printedPhoto('صورة مطبوعة'),
-  screenPhoto('صورة على شاشة'),
-  video('فيديو');
+  realFace('وجه حقيقي (Bona fide)'),
+  printedPhoto('صورة مطبوعة (Print attack)'),
+  screenPhoto('صورة على شاشة (Screen replay)'),
+  video('فيديو (Video replay)');
 
   const AttemptType(this.label);
   final String label;
@@ -13,8 +13,8 @@ enum AttemptType {
 }
 
 enum TestKind {
-  active('نشط'),
-  passive('سلبي');
+  active('Active'),
+  passive('Passive');
 
   const TestKind(this.label);
   final String label;

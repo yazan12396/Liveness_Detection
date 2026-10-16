@@ -26,25 +26,25 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('اختبار كشف الحيوية')),
+      appBar: AppBar(title: const Text('Liveness Detection')),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
           _MenuCard(
             icon: Icons.gesture,
-            title: 'الكشف النشط',
+            title: 'الكشف النشط (Active Liveness)',
             subtitle: '3 تحديات عشوائية: التفات، رمش، ابتسامة',
             onTap: () => _startFaceTest(context, TestKind.active),
           ),
           _MenuCard(
             icon: Icons.face_retouching_natural,
-            title: 'الكشف السلبي',
+            title: 'الكشف السلبي (Passive Liveness)',
             subtitle: 'تحليل الإطار بنموذج مضاد للتزييف مع وميض الشاشة',
             onTap: () => _startFaceTest(context, TestKind.passive),
           ),
           _MenuCard(
             icon: Icons.badge_outlined,
-            title: 'تصوير الهوية',
+            title: 'تصوير الهوية (Document Capture)',
             subtitle: 'ماسح المستندات من ML Kit',
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute<void>(
@@ -54,7 +54,7 @@ class HomeScreen extends StatelessWidget {
           ),
           _MenuCard(
             icon: Icons.history,
-            title: 'سجل الاختبارات',
+            title: 'سجل الاختبارات (Test Log)',
             subtitle: 'نسب نجاح الكشف لكل نوع وتصدير CSV',
             onTap: () => Navigator.of(context).push(
               MaterialPageRoute<void>(builder: (_) => const HistoryScreen()),
